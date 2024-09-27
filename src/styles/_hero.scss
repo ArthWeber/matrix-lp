@@ -2,7 +2,14 @@
     padding: 5.6vw;
     min-height: 90vh;
     background-image: url('../img/matrix-poster.png');
-    background-size: cover;   
+    background-size: cover;
+    
+    @media (max-width: 768px) {
+        background-size: contain;
+        background-repeat: no-repeat;
+        min-width: none;
+
+    }
     
     &__content {
         max-width: 640px;
@@ -12,11 +19,23 @@
         justify-content: flex-end;
         font-family: Amazon Ember, sans-serif;
         color: #fff;
+
+        @media (max-width: 768px) {
+            height: auto;
+            max-width: 100%;
+        }
         
         &__branding {           
             font-weight: bold;           
             font-size: 48px;
             text-transform: uppercase;
+
+            @media (max-width: 768px) {
+                max-width: 100%;
+                text-transform: capitalize;
+                font-size: 42px;
+                margin-top: calc(50vw + 8px);
+            }
 
         }
 
@@ -24,12 +43,22 @@
             margin-top: 64px;
             font-weight: lighter;            
             font-size: 18px;                       
-            letter-spacing: 1px;            
+            letter-spacing: 1px;
+            
+            @media (max-width: 768px) {
+                font-size: 16px;
+                margin-top: 24px;
+                letter-spacing: 0;                
+            }
         }
         
         &__info {
             display: flex;
             margin-top: 12px;
+
+            @media (max-width: 768px) {
+                margin-top: 14px;
+            }
             
             &__item {
                 padding: 2px 8px;
@@ -38,6 +67,10 @@
                 background-color: #d4d4d4;
                 color: #000;
                 border-radius: 2px;
+
+                @media (max-width: 768px) {
+                    font-size: 12px;
+                }
             }
         }
 
@@ -55,10 +88,18 @@
                     border-radius: 2px;
                     padding: 2px 8px;
                     margin-right: 28px;
+
+                    @media (max-width: 768px) {
+                        font-size: 12px;
+                    }
                 }
 
                 img {
                     height: 32px;
+
+                    @media (max-width: 768px) {
+                        height: 24px;
+                    }
                 }
             }
         }
@@ -68,18 +109,31 @@
             font-weight: bolder;            
             font-size: 18px;                       
             letter-spacing: 1px;
+
+            @media (max-width: 768px) {
+                margin-top: 32px;
+            }
         }
 
         &__links {
-            display:flex;
+            display:flex;            
             margin-top: 32px;
+
+            @media (max-width: 768px) {
+                justify-content: center;
+            }
             
             a {
                 margin: 24px;
+
                 img {               
                     max-width: 96px;
+
+                    @media (max-width: 768px) {
+                        max-width: 50%;
+                    }
                 }
             }
-        }
+        }        
     }
 }
