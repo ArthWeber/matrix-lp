@@ -4,6 +4,10 @@
     padding: 2vw 5.6vw;
     min-height: 50vw;
     margin-top: 2.5vw;
+
+    @media (max-width: 768px) {
+        display: none;
+    } 
     
     &__container {
         position: relative;

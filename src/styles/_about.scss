@@ -30,11 +30,22 @@
         }
     }
 
-    &__list {
-        margin-top: 44px;        
+    &__list {                
         display: none;
-        grid-template-columns: 1fr 1fr 1fr;
-        gap: 24px;
+        grid-template-columns: 1fr 1fr 1fr;        
+        text-align: center;
+        color: var.$textColor--default;
+        
+        &:nth-last-child(1) {
+            grid-template-columns: 1fr 1fr;                                   
+        }
+
+        img {
+            margin-top: 48px;
+            max-width: 40%;
+            border-radius: 12px;
+        }
+
 
         @media (max-width: 768px) {
             grid-template-columns: 1fr 1fr;
@@ -43,5 +54,5 @@
         &--is-active {
             display: grid;
         }        
-    }
+    }   
 }
