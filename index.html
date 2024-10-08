@@ -10,9 +10,9 @@
     <section class="hero">
         <div class="hero__content">
             <div class="hero__content__branding">
-                <h1>Matrix</h1>
+                <h1 class="title--big">Matrix</h1>
             </div>        
-            <p>
+            <p class="text--big">
                 O mundo é uma farsa, construído por uma das mais poderosas máquinas com inteligência artificial para nos controlar.
             </p>
             <ul class="hero__content__info">
@@ -31,20 +31,84 @@
                     <img src="./dist/img/14.png" alt="Classificação 14 anos">
                 </li>
             </ul>
-            <h3>Assista agora:</h3>
+            <h3 class="title--small">Assista agora:</h3>
             <ul class="hero__content__links">                
                 <li>            
-                    <a href="#">
+                    <a href="https://www.max.com/br/pt/movies/matrix/012cacbd-5893-4379-b7a6-d3737c61d4b5?utm_source=universal_search">
                         <img src="./dist/img/Max_logo.png" alt="HBO Max">
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="https://www.primevideo.com/dp/amzn1.dv.gti.dea9f6b7-e0a0-38c9-7467-d6079c6fb4f0?autoplay=0&ref_=atv_cf_strg_wb">
                         <img src="./dist/img/prime_logo.png" alt="Amazon Prime Video">
                     </a>
                 </li>
             </ul>
         </div>            
     </section>
+    <section class="synopsis">
+        <div class="synopsis__container">
+            <div class="synopsis__container__img_container">
+                <img src="./dist/img/synopsis_img.png" alt="">
+            </div>
+            <div class="synopsis__container__text_container">
+                <h4 class="title--small">Sinopse</h4>
+                <p class="text--big">
+                    O jovem programador Thomas Anderson (Keanu Reeves) é atormentado por estranhos pesadelos em que está sempre conectado por cabos a um imenso sistema de computadores do futuro. 
+                    À medida que o sonho se repete, ele começa a desconfiar da realidade. 
+                    Thomas conhece os misteriosos Morpheus (Laurence Fishburne) e Trinity (Carrie-Anne Moss) e descobre que é vítima de um sistema inteligente e artificial chamado Matrix, que manipula a mente das pessoas e cria a ilusão de um mundo real enquanto usa os cérebros e corpos dos indivíduos para produzir energia.
+                </p>
+            </div>
+        </div>
+    </section>    
+    <section class="about">
+        <nav class="about__tabs">            
+            <button data-tab-button="main_cast" class="about__tabs__button about__tabs__button--is-active">
+                Elenco
+            </button>
+            <button data-tab-button="directors" class="about__tabs__button">
+                Direção
+            </button>
+        </nav>       
+        <ul data-tab-id="main_cast" class="about__list">
+            <li class="about__list__item">
+                <img src="" alt="">
+                <p>Keanu Reaves</p>
+                <p></p>
+            </li>
+            <li class="about__list__item"><img src="" alt="">
+                <p></p>
+                <p></p>
+            </li>
+            <li class="about__list__item"><img src="" alt="">
+                <p></p>
+                <p></p>
+            </li>
+            <li class="about__list__item"><img src="" alt="">
+                <p></p>
+                <p></p>
+            </li>
+            <li class="about__list__item"><img src="" alt="">
+                <p></p>
+                <p></p>
+            </li>
+            <li class="about__list__item"><img src="" alt="">
+                <p></p>
+                <p></p>
+            </li>
+        </ul>
+        <ul data-tab-id="directors" class="about__list">
+            <li class="about__list__item">
+                <img src="" alt="">
+                <h4></h4>
+            </li>
+            <li class="about__list__item">
+                <img src="" alt="">
+                <h4></h4>
+            </li>
+        </ul>
+    </section>
+
+<script src="./src/scripts/main.js"></script>
 </body>
 </html>

@@ -1,4 +1,7 @@
+@use 'var';
 @use 'hero';
+@use 'synopsis';
+@use 'about';
 
 @font-face {
     font-family: Amazon Ember;
@@ -18,14 +21,73 @@
     font-weight: lighter;
 }
 
+@mixin text($fontSize: 16px) {
+    font-size: $fontSize;
+    line-height: $fontSize + 10px;    
+}
+
+@mixin title($fontSize: 40px) {
+    @include text($fontSize);    
+}
+
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: Amazon Ember, sans-serif;
     list-style: none;
     cursor:default;
 }
 
 body {
-    background-color: #000;   
+    background-color: var.$bgColor--default;   
+}
+
+.text--big {
+    @include text(18px);
+
+    @media (max-width: 768px) {
+        @include text(16px)
+    }
+}
+
+.text {
+    @include text;
+
+    @media (max-width: 768px) {
+        @include text(15px)
+    }
+}
+
+.text--small {
+    @include text(12px);
+
+    @media (max-width: 768px) {
+        @include text(14px)
+    }
+}
+
+.title--big {
+    @include title(48px);
+    font-weight: bolder;
+
+    @media (max-width: 768px) {
+        @include title(42px)
+    }    
+}
+
+.title {
+    @include title;
+
+    @media (max-width: 768px) {
+        @include title(24px);
+    }
+}
+
+.title--small {
+    @include title(24px);
+
+    @media (max-width: 768px) {
+        @include title(18px)
+    }
 }
