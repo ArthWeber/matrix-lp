@@ -1,7 +1,8 @@
 document.addEventListener('DOMContentLoaded', function() {
     const buttons = document.querySelectorAll('[data-tab-button]');
+    const awards = document.querySelectorAll('[data-faq-question]');
 
-
+//about tab
     for (let i = 0; i < buttons.length; i++) {
         buttons[i].addEventListener('click', function(bttn) {
             const targetTab = bttn.target.dataset.tabButton;
@@ -12,8 +13,14 @@ document.addEventListener('DOMContentLoaded', function() {
             bttn.target.classList.add('about__tabs__button--is-active')
         })
     }
+
+//Awards
+    for (let i = 0; i < awards.length; i++) {
+        awards[i].addEventListener('click', openClose);
+    }
 })
 
+//Funtions about tabs
 function hiddenTabs() {
     const tabsContainer = document.querySelectorAll('[data-tab-id]');
 
@@ -29,3 +36,12 @@ function removeActiveBtn() {
         buttons[i].classList.remove('about__tabs__button--is-active');
     }
 }
+
+//Function FAQ
+function openClose(elemento) {
+    const classe = 'faq__questions__item--is-open';
+    const elementoPai = elemento.target.parentNode;
+
+    elementoPai.classList.toggle(classe);
+}
+

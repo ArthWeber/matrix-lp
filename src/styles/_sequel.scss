@@ -1,0 +1,38 @@
+@use 'var';
+
+.sequel {
+    padding: 2vw 5.6vw;
+    min-height: 50vw;
+    margin-top: 2.5vw;
+    color: var.$textColor--default;
+
+    h4 {
+        margin-bottom: 64px;
+
+        @media (max-width: 768px) {
+            margin: 36px 0;            
+        }
+    }
+
+    &__content {
+        display:flex;
+        gap: 24px;
+        text-align: center;
+
+        @media (max-width: 768px) {
+            display: block;            
+        }
+
+        &__item {
+            
+            img {
+                height: 586px;
+
+                @media (max-width: 768px) {
+                    height: 368px;
+                    margin-top: 24px;
+                }
+            }
+        }
+    }
+}
