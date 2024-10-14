@@ -107,9 +107,15 @@
         }
 
         &__links {
-            display:flex;            
-            margin-top: 32px;            
+            display:flex;                        
+            margin-top: 32px;
             
+            @media (max-width: 768px) {
+                justify-content: space-between;
+                margin: 24px 18px
+            }
+            
+                        
             a {
                 margin: 24px;                
 
@@ -118,9 +124,9 @@
                     cursor: pointer;
 
                     @media (max-width: 768px) {
-                        max-width: 40%;
+                        height: 82px;
                     }
-                }
+                }                
             }
         }        
     }

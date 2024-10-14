@@ -4,10 +4,6 @@
     padding: 2vw 5.6vw;
     min-height: 50vw;
     margin-top: 2.5vw;
-
-    @media (max-width: 768px) {
-        display: none;
-    } 
     
     &__container {
         position: relative;
@@ -33,6 +29,10 @@
                 opacity: .7;
                 content: '';
             }
+
+            @media (max-width: 768px) {
+                display: none;
+            }                        
         }
 
         &__text_container {
@@ -44,7 +44,7 @@
             left:45%;
             z-index: 1;
             padding-right: 58px;
-            color: var.$textColor--default;
+            color: var.$textColor--default;             
     
             h4 {
                 text-transform: uppercase;
@@ -56,6 +56,25 @@
                 font-weight: bold;           
                 letter-spacing: 1px;
                 line-height: 27px;        
+            }
+
+            @media (max-width: 768px) {
+                position: relative;
+                top: 0;
+                left: 0;
+                padding: 0;
+                margin-bottom: 44px;
+
+                h4 {
+                    text-transform: none;                    
+                }
+
+                p {
+                    text-align: left;
+                    font-weight: lighter;
+                    letter-spacing: 0;
+                    line-height:24px;
+                }
             }
         }
     }    
