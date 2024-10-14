@@ -1,0 +1,64 @@
+@use 'var';
+
+.header {
+    z-index: 2;
+    position: sticky;
+    top: 0;
+    left: 0;
+    background-color: var.$bgColor--default;
+    transition: background-color 0.5s ease;
+
+
+    &--is-hidden {
+        background-color: transparent;
+
+        .header {
+
+            &__logo, &__links__item:first-child {                
+                visibility: hidden;
+            }
+        }
+    }
+
+    &__container {
+        padding: 8px 36px;
+        display: flex;
+        justify-content: space-between;
+
+        @media (max-width: 768px) {
+            padding: 0 12px 0 20px;
+        }
+    }
+
+    &__logo {
+        max-width: 198px;
+        width: 100%;
+        margin: 8px 0;
+        transition: opacity 0.5s ease;
+
+        @media (max-width: 768px) {
+            max-width: 132px;            
+        }
+    }
+
+    &__links {
+        display: flex;        
+
+        &__item {
+            margin: 5px 0;
+            transition: opacity 0.5s ease;                     
+        }
+    }
+
+    .button {
+        height: 50px;
+        padding: 8px 11px; 
+        
+        @media (max-width: 768px) {
+            font-size: 13px;
+            padding: 8px 11px;
+            height: 40px;
+            letter-spacing: 0;
+        }
+    }
+}

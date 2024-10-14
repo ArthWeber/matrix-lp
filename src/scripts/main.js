@@ -2,6 +2,19 @@ document.addEventListener('DOMContentLoaded', function() {
     const buttons = document.querySelectorAll('[data-tab-button]');
     const awards = document.querySelectorAll('[data-faq-question]');
 
+    const heroSection = document.querySelector('.hero');
+    const heroHeight = heroSection.clientHeight;
+
+    window.addEventListener('scroll', function() {
+        const posicaoAtual = window.scrollY;
+
+        if (posicaoAtual < heroHeight) {
+            hiddenHeader();            
+        } else {
+            showHeader();
+        }
+    })
+
 //about tab
     for (let i = 0; i < buttons.length; i++) {
         buttons[i].addEventListener('click', function(bttn) {
@@ -19,6 +32,18 @@ document.addEventListener('DOMContentLoaded', function() {
         awards[i].addEventListener('click', openClose);
     }
 })
+
+//Function header
+
+function hiddenHeader () {
+    const header = document.querySelector('header');
+    header.classList.add('header--is-hidden')
+}
+
+function showHeader () {
+    const header = document.querySelector('header');
+    header.classList.remove('header--is-hidden')
+}
 
 //Funtions about tabs
 function hiddenTabs() {
