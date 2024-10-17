@@ -11,7 +11,7 @@
     &__questions {
 
         &__item {
-            background-color: #13151d;
+            background-color: var.$bgColor--other;
             margin-bottom: 16px;
 
             &__quest {                
