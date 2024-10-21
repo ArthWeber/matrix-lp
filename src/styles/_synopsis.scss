@@ -31,7 +31,12 @@
             }
 
             @media (max-width: 768px) {
-                display: none;
+                width: 100%;
+                position: absolute; 
+                
+                &::before {
+                    opacity: .5;
+                }
             }                        
         }
 
@@ -62,7 +67,7 @@
                 position: relative;
                 top: 0;
                 left: 0;
-                padding: 0;
+                padding: 18px;
                 margin-bottom: 44px;
 
                 h4 {

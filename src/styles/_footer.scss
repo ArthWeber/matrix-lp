@@ -3,7 +3,7 @@
 .footer {
     padding: 26px 8px;
     color: var.$textColor--default;
-    background-color: var.$bgColor--other;
+    background-color: var.$bgColor--secondary;
     
     &__container {
         max-width: 1024px;
@@ -27,7 +27,7 @@
         display: flex;
         align-items: center;
         flex-wrap: wrap;
-        justify-content: center;
+        justify-content: center;        
 
         &__item {
             display: inline-block;
@@ -36,7 +36,8 @@
                 text-decoration: none;
                 padding: 8px 16px;
                 display: block;
-
+                color: var.$textColor--dark;
+                
                 &:hover {
                     color: var.$textColor--default;
                 }
